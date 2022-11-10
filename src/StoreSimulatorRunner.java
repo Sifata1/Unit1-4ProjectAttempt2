@@ -36,13 +36,15 @@ public class StoreSimulatorRunner {
 
         StoreSimulator trip1 = new StoreSimulator(a,b,w,p,o,po,pe);
 
-        System.out.println("To confirm, you bought: ");
-        System.out.println(trip1.Apples(a) + " apples");
-
         System.out.println("-------------------------");
         System.out.println("Walmart");
         System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
         System.out.println();
+        System.out.println(a +" apples - " + "$" + trip1.costApples(a,0.99));
         System.out.println(a +" apples - " + "$" + (0.99*a));
+        System.out.println(a +" apples - " + "$" + (0.99*a));
+        System.out.println(a +" apples - " + "$" + (0.99*a));
+        System.out.println(a +" apples - " + "$" + (0.99*a));
+
     }
 }

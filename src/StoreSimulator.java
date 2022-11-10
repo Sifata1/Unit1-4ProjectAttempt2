@@ -19,8 +19,9 @@ public class StoreSimulator {
         pear = pears;
     }
 
-    public int Apples(int apples) {
-        return apples;
+    public double costApples(int apples, double cost1) {
+        double cost = (apples)*(cost1);
+        return cost;
     }
     public String apples(int apples) {
         double cost = (apples * 0.99);
