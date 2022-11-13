@@ -3,7 +3,6 @@ public class StoreSimulatorRunner {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Welcome to Walmart! We now only sell apples, bananas, watermelons, peaches, oranges, pomegranates, and pears.");
-        System.out.println("Are you ready to begin!");
         System.out.println();
 
         System.out.println("How many apples would you like to buy? Each apple costs $0.99. Enter 0 if you wish to not buy any apples.");
@@ -41,8 +40,8 @@ public class StoreSimulatorRunner {
         System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
         System.out.println();
         System.out.println(a +" apples - " + "$" + trip1.costApples(a,0.99));
-        System.out.println(a +" apples - " + "$" + (0.99*a));
-        System.out.println(a +" apples - " + "$" + (0.99*a));
+        System.out.println(b +" bananas - " + "$" + trip1.costBananas(b,0.75));
+        System.out.println(a +" apples - " + "$" + trip1.cost);
         System.out.println(a +" apples - " + "$" + (0.99*a));
         System.out.println(a +" apples - " + "$" + (0.99*a));
 

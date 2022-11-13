@@ -23,6 +23,10 @@ public class StoreSimulator {
         double cost = (apples)*(cost1);
         return cost;
     }
+    public double costBananas(int bananas, double cost2) {
+        double cost = (bananas)*(cost2);
+        return cost;
+    }
     public String apples(int apples) {
         double cost = (apples * 0.99);
         return "You have bought " + apples + "apples with " + (cost*apples);
