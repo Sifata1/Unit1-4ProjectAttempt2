@@ -1,3 +1,7 @@
+import static java.lang.Math.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class StoreSimulator {
 
     private int apple;
@@ -95,7 +99,11 @@ public class StoreSimulator {
         return cost;
     }
 
-    public String receiptToString() {
+    public double getNetTotal() {
+        return netTotal;
+    }
+
+    public String pricesToString() {
         String design = "|-------------------------|";
         String apples = "Apple --> $0.99";
         String bananas = "Banana --> $0.75";

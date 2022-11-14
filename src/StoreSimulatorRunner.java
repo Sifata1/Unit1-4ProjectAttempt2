@@ -1,11 +1,16 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
+
+import static java.lang.Math.round;
+
 public class StoreSimulatorRunner {
     public static void main(String[] args) {
+        DecimalFormat df = new DecimalFormat("0.00");
         Scanner s = new Scanner(System.in);
         StoreSimulator start = new StoreSimulator();
 
         System.out.println("Welcome to The Local Market! Below are our items and prices.");
-        System.out.println(start.receiptToString());
+        System.out.println(start.pricesToString());
         System.out.println();
 
         System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples .");
@@ -45,7 +50,7 @@ public class StoreSimulatorRunner {
 
         StoreSimulator trip1 = new StoreSimulator(a,b,w,p,o,po,pe);
 
-        System.out.println("-----------------------------------");
+        System.out.println("<-------------------------------------->");
         System.out.println("The Local Market");
         System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
         System.out.println();
@@ -57,7 +62,8 @@ public class StoreSimulatorRunner {
         System.out.println(po +" pomegranates - " + "$" + trip1.costPomegranates(o,3.50));
         System.out.println(pe +" pears - " + "$" + trip1.costPears(o,0.99));
         System.out.println();
-        System.out.println("Net Cost: " + (trip1.costApples(a,0.99) + trip1.costBananas(b,0.75) +trip1.costWatermelons(w,3.50) + trip1.costPeaches(p,1.25) + trip1.costOranges(o,1.50) + trip1.costPomegranates(o,3.50) +  trip1.costPears(o,0.99)));
+        System.out.println("Net Cost: " + df.format(trip1.getNetTotal()));
+        System.out.println("<-------------------------------------->");
 
     }
 }
