@@ -4,7 +4,7 @@ public class StoreSimulatorRunner {
         Scanner s = new Scanner(System.in);
         StoreSimulator randomizer = new StoreSimulator();
 
-        System.out.println("Welcome to Walmart!\nWe now only sell apples, bananas, watermelons, peaches, oranges, pomegranates, and pears.");
+        System.out.println("Welcome to The Local Market! Below are our items and prices.");
         System.out.println(randomizer.toString());
         System.out.println();
 
@@ -46,7 +46,7 @@ public class StoreSimulatorRunner {
         StoreSimulator trip1 = new StoreSimulator(a,b,w,p,o,po,pe);
 
         System.out.println("-----------------------------------");
-        System.out.println("Walmart");
+        System.out.println("The Local Market");
         System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
         System.out.println();
         System.out.println(a +" apples - " + "$" + trip1.costApples(a,0.99));

@@ -9,9 +9,9 @@ public class StoreSimulator {
     private int pear;
     private double netTotal;
 
-
     public StoreSimulator() {
     }
+
     public StoreSimulator(int apples, int bananas, int watermelons, int peaches, int oranges, int pomegranates, int pears ) {
         apple = apples;
         banana = bananas;
@@ -37,6 +37,7 @@ public class StoreSimulator {
         netTotal = netTotal + cost;
         return cost;
     }
+
     public double costBananas(int bananas, double cost2) {
         double cost = (bananas)*(cost2);
         netTotal = netTotal + cost;
@@ -71,16 +72,6 @@ public class StoreSimulator {
         double cost = (pears)*(cost7);
         netTotal = netTotal + cost;
         return cost;
-    }
-
-    public String apples(int apples) {
-        double cost = (apples * 0.99);
-        return "You have bought " + apples + "apples with " + (cost*apples);
-    }
-
-    public String bananas(int bananas) {
-        double cost = (bananas * 0.75);
-        return "You have bought " + bananas + "apples with " + (cost*bananas);
     }
 
     public String toString() {
