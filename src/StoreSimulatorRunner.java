@@ -1,6 +1,5 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
-
 import static java.lang.Math.round;
 
 public class StoreSimulatorRunner {
@@ -54,13 +53,13 @@ public class StoreSimulatorRunner {
         System.out.println("The Local Market");
         System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
         System.out.println();
-        System.out.println(a +" apples - " + "$" + trip1.costApples(a,0.99));
-        System.out.println(b +" bananas - " + "$" + trip1.costBananas(b,0.75));
-        System.out.println(w +" watermelons - " + "$" + trip1.costWatermelons(w,3.50));
-        System.out.println(p +" peaches - " + "$" + trip1.costPeaches(p,1.25));
-        System.out.println(o +" oranges - " + "$" + trip1.costOranges(o,1.50));
-        System.out.println(po +" pomegranates - " + "$" + trip1.costPomegranates(o,3.50));
-        System.out.println(pe +" pears - " + "$" + trip1.costPears(o,0.99));
+        System.out.println(a +" apples - " + "$" + df.format(trip1.costApples(a,0.99)));
+        System.out.println(b +" bananas - " + "$" + df.format(trip1.costBananas(b,0.75)));
+        System.out.println(w +" watermelons - " + "$" + df.format(trip1.costWatermelons(w,3.50)));
+        System.out.println(p +" peaches - " + "$" + df.format(trip1.costPeaches(p,1.25)));
+        System.out.println(o +" oranges - " + "$" + df.format(trip1.costOranges(o,1.50)));
+        System.out.println(po +" pomegranates - " + "$" + df.format(trip1.costPomegranates(o,3.50)));
+        System.out.println(pe +" pears - " + "$" + df.format(trip1.costPears(o,0.99)));
         System.out.println();
         System.out.println("Net Cost: $" + df.format(trip1.getNetTotal()));
         System.out.println("<-------------------------------------->");
