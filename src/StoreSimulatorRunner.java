@@ -13,37 +13,37 @@ public class StoreSimulatorRunner {
         System.out.println(start.pricesToString());
         System.out.println();
 
-        System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples .");
+        System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples. \nQuantity: 25");
         int a = s.nextInt();
         a = start.random(a);
         System.out.println();
 
-        System.out.println("How many bananas would you like to buy? Each banana costs $0.75. \n Enter 0 if you wish to not buy any bananas. Enter -1 if you would to buy a randomly generated amount of bananas. \n Note that the maximum number of bananas is 100.");
+        System.out.println("How many bananas would you like to buy? Enter 0 if you wish to not buy any bananas or enter -1 if you would like to buy a random number of bananas. \nQuantity: 25");
         int b = s.nextInt();
         b = start.random(b);
         System.out.println();
 
-        System.out.println("How many watermelons would you like to buy? Each watermelon costs $3.50. Enter 0 if you wish to not buy any watermelons.");
+        System.out.println("How many watermelons would you like to buy? Enter 0 if you wish to not buy any watermelons or enter -1 if you would like to buy a random number of watermelons. \nQuantity: 25");
         int w = s.nextInt();
         w = start.random(w);
         System.out.println();
 
-        System.out.println("How many peaches would you like to buy? Each peach costs $1.25. Enter 0 if you wish to not buy any peach.");
+        System.out.println("How many peaches would you like to buy? Enter 0 if you wish to not buy any peaches or enter -1 if you would like to buy a random number of peaches. \nQuantity: 25");
         int p = s.nextInt();
         p = start.random(p);
         System.out.println();
 
-        System.out.println("How many oranges would you like to buy? Each orange costs $1.50. Enter 0 if you wish to not buy any orange.");
+        System.out.println("How many oranges would you like to buy? Enter 0 if you wish to not buy any oranges or enter -1 if you would like to buy a random number of oranges. \nQuantity: 25");
         int o = s.nextInt();
         o = start.random(o);
         System.out.println();
 
-        System.out.println("How many pomegranates would you like to buy? Each pomegranate costs $3.50. Enter 0 if you wish to not buy any pomegranates.");
+        System.out.println("How many pomegranates would you like to buy? Enter 0 if you wish to not buy any pomegranates or enter -1 if you would like to buy a random number of pomegranates. \nQuantity: 25");
         int po = s.nextInt();
         po = start.random(po);
         System.out.println();
 
-        System.out.println("How many pears would you like to buy? Each pear costs $0.99. Enter 0 if you wish to not buy any pears.");
+        System.out.println("How many pears would you like to buy? Enter 0 if you wish to not buy any pears or enter -1 if you would like to buy a random number of pears. \nQuantity: 25");
         int pe = s.nextInt();
         pe = start.random(pe);
         System.out.println();
@@ -62,7 +62,7 @@ public class StoreSimulatorRunner {
         System.out.println(po +" pomegranates - " + "$" + trip1.costPomegranates(o,3.50));
         System.out.println(pe +" pears - " + "$" + trip1.costPears(o,0.99));
         System.out.println();
-        System.out.println("Net Cost: " + df.format(trip1.getNetTotal()));
+        System.out.println("Net Cost: $" + df.format(trip1.getNetTotal()));
         System.out.println("<-------------------------------------->");
 
     }
