@@ -10,6 +10,8 @@ public class StoreSimulator {
     private double netTotal;
 
 
+    public StoreSimulator() {
+    }
     public StoreSimulator(int apples, int bananas, int watermelons, int peaches, int oranges, int pomegranates, int pears ) {
         apple = apples;
         banana = bananas;
@@ -18,6 +20,16 @@ public class StoreSimulator {
         orange = oranges;
         pomegranate = pomegranates;
         pear = pears;
+    }
+
+    public int random(int random) {
+        int randomNum = 0;
+        if (random == -1) {
+            randomNum = (int) (Math.random() * 100) + 1;
+        } else {
+            randomNum = random;
+        }
+        return randomNum;
     }
 
     public double costApples(int apples, double cost1) {
@@ -69,6 +81,19 @@ public class StoreSimulator {
     public String bananas(int bananas) {
         double cost = (bananas * 0.75);
         return "You have bought " + bananas + "apples with " + (cost*bananas);
+    }
+
+    public String toString() {
+        String design = "|-------------------------|";
+        String apples = "Apple --> $0.99";
+        String bananas = "Banana --> $0.75";
+        String watermelons = "Watermelon --> $3.50";
+        String peaches = "Peach --> $1.25";
+        String oranges = "Orange --> $1.50";
+        String pomegranates = "Pomegranate --> $3.50";
+        String pears = "Pear --> $0.99";
+
+        return design + "\n  " + apples + "\n  " + bananas + "\n  " +  watermelons +  "\n  " + peaches +"\n  "+ oranges +"\n  "+ pomegranates +"\n  "+ pears +"\n"+ design;
     }
 
 }
