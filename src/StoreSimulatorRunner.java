@@ -2,45 +2,45 @@ import java.util.Scanner;
 public class StoreSimulatorRunner {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        StoreSimulator randomizer = new StoreSimulator();
+        StoreSimulator start = new StoreSimulator();
 
         System.out.println("Welcome to The Local Market! Below are our items and prices.");
-        System.out.println(randomizer.toString());
+        System.out.println(start.receiptToString());
         System.out.println();
 
         System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples .");
         int a = s.nextInt();
-        a = randomizer.random(a);
+        a = start.random(a);
         System.out.println();
 
         System.out.println("How many bananas would you like to buy? Each banana costs $0.75. \n Enter 0 if you wish to not buy any bananas. Enter -1 if you would to buy a randomly generated amount of bananas. \n Note that the maximum number of bananas is 100.");
         int b = s.nextInt();
-        b = randomizer.random(b);
+        b = start.random(b);
         System.out.println();
 
         System.out.println("How many watermelons would you like to buy? Each watermelon costs $3.50. Enter 0 if you wish to not buy any watermelons.");
         int w = s.nextInt();
-        w = randomizer.random(w);
+        w = start.random(w);
         System.out.println();
 
         System.out.println("How many peaches would you like to buy? Each peach costs $1.25. Enter 0 if you wish to not buy any peach.");
         int p = s.nextInt();
-        p = randomizer.random(p);
+        p = start.random(p);
         System.out.println();
 
         System.out.println("How many oranges would you like to buy? Each orange costs $1.50. Enter 0 if you wish to not buy any orange.");
         int o = s.nextInt();
-        o = randomizer.random(o);
+        o = start.random(o);
         System.out.println();
 
         System.out.println("How many pomegranates would you like to buy? Each pomegranate costs $3.50. Enter 0 if you wish to not buy any pomegranates.");
         int po = s.nextInt();
-        po = randomizer.random(po);
+        po = start.random(po);
         System.out.println();
 
         System.out.println("How many pears would you like to buy? Each pear costs $0.99. Enter 0 if you wish to not buy any pears.");
         int pe = s.nextInt();
-        pe = randomizer.random(pe);
+        pe = start.random(pe);
         System.out.println();
 
         StoreSimulator trip1 = new StoreSimulator(a,b,w,p,o,po,pe);

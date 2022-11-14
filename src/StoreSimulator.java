@@ -25,7 +25,7 @@ public class StoreSimulator {
     public int random(int random) {
         int randomNum = 0;
         if (random == -1) {
-            randomNum = (int) (Math.random() * 100) + 1;
+            randomNum = (int) (Math.random() * 25) + 1;
         } else {
             randomNum = random;
         }
@@ -33,48 +33,69 @@ public class StoreSimulator {
     }
 
     public double costApples(int apples, double cost1) {
-        double cost = (apples)*(cost1);
+        double cost = 0;
+        for (int counter =1; counter <= apples; counter++) {
+            cost = cost + cost1;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costBananas(int bananas, double cost2) {
-        double cost = (bananas)*(cost2);
+        double cost = 0;
+        for (int counter =1; counter <= bananas; counter++) {
+            cost = cost + cost2;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costWatermelons(int watermelons, double cost3) {
-        double cost = (watermelons)*(cost3);
+        double cost = 0;
+        for (int counter =1; counter <= watermelons; counter++) {
+            cost = cost + cost3;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costPeaches(int peaches, double cost4) {
-        double cost = (peaches)*(cost4);
+        double cost = 0;
+        for (int counter =1; counter <= peaches; counter++) {
+            cost = cost + cost4;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costOranges(int oranges, double cost5) {
-        double cost = (oranges)*(cost5);
+        double cost = 0;
+        for (int counter =1; counter <= oranges; counter++) {
+            cost = cost + cost5;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costPomegranates(int pomegranates, double cost6) {
-        double cost = (pomegranates)*(cost6);
+        double cost = 0;
+        for (int counter =1; counter <= pomegranates; counter++) {
+            cost = cost + cost6;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
     public double costPears(int pears, double cost7) {
-        double cost = (pears)*(cost7);
+        double cost = 0;
+        for (int counter =1; counter <= pears; counter++) {
+            cost = cost + cost7;
+        }
         netTotal = netTotal + cost;
         return cost;
     }
 
-    public String toString() {
+    public String receiptToString() {
         String design = "|-------------------------|";
         String apples = "Apple --> $0.99";
         String bananas = "Banana --> $0.75";
