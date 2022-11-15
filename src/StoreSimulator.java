@@ -1,6 +1,7 @@
 import static java.lang.Math.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class StoreSimulator {
 
@@ -24,6 +25,15 @@ public class StoreSimulator {
         orange = oranges;
         pomegranate = pomegranates;
         pear = pears;
+    }
+
+    public boolean willSimulationRun(String answer) {
+        answer = answer.toLowerCase();
+        if (answer == "yes") {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int random(int random) {

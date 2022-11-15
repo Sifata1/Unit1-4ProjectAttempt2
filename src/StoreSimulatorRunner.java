@@ -11,6 +11,12 @@ public class StoreSimulatorRunner {
         System.out.println("Welcome to The Local Market! Below are our items and prices.");
         System.out.println(start.pricesToString());
         System.out.println();
+        System.out.println("Are you ready to begin? Enter yes to begin.");
+        String answer = s.nextLine();
+
+       while (start.willSimulationRun(answer) == true) {
+
+       }
 
         System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples. \nQuantity: 25");
         int a = s.nextInt();
