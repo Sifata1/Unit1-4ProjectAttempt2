@@ -28,12 +28,14 @@ public class StoreSimulator {
     }
 
     public boolean willSimulationRun(String answer) {
-        answer = answer.toLowerCase();
-        if (answer == "yes") {
+        String a = answer.toLowerCase();
+        if (a.equals("yes")) {
             return true;
-        } else {
-            return false;
         }
+        return false;
+    }
+    public boolean theEnd() {
+        return true;
     }
 
     public int random(int random) {
