@@ -1,4 +1,7 @@
 import static java.lang.Math.*;
+import java.lang.String;
+
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -34,9 +37,6 @@ public class StoreSimulator {
         }
         return false;
     }
-    public boolean theEnd() {
-        return true;
-    }
 
     public int random(int random) {
         int randomNum = 0;
@@ -46,6 +46,15 @@ public class StoreSimulator {
             randomNum = random;
         }
         return randomNum;
+    }
+
+    public boolean checkForNegatives(int response) {
+        String r = String.valueOf(response);
+        int negative = r.indexOf("-");
+        if (negative != -1) {
+            return true;
+        }
+        return false;
     }
 
     public double costApples(int apples, double cost1) {
