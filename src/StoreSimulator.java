@@ -1,20 +1,14 @@
-import static java.lang.Math.*;
 import java.lang.String;
-
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Locale;
 
 public class StoreSimulator {
 
-    private int apple;
-    private int banana;
-    private int watermelon;
-    private int peach;
-    private int orange;
-    private int pomegranate;
-    private int pear;
+    public int apple;
+    public int banana;
+    public int watermelon;
+    public int peach;
+    public int orange;
+    public int pomegranate;
+    public int pear;
     private double netTotal;
 
     public StoreSimulator() {
@@ -60,6 +54,36 @@ public class StoreSimulator {
         }
         return false;
     }
+
+    public void numApples(int amt) {
+        apple = amt;
+    }
+
+    public void numBananas(int amt) {
+        banana = amt;
+    }
+
+    public void numWatermelons(int amt) {
+        watermelon = amt;
+    }
+
+    public void numPeaches(int amt) {
+        peach = amt;
+    }
+
+    public void numOranges(int amt) {
+        orange = amt;
+    }
+
+    public void numPomegranates(int amt) {
+        pomegranate = amt;
+    }
+
+    public void numPears(int amt) {
+        pear = amt;
+    }
+
+
 
     public double costApples(int apples, double cost1) {
         double cost = 0;
@@ -128,7 +152,11 @@ public class StoreSimulator {
         return netTotal;
     }
 
-    public String pricesToString() {
+    public void changeApples(int amt) {
+
+    }
+
+    public String toString() {
         String design = "|-------------------------|";
         String apples = "Apple --> $0.99";
         String bananas = "Banana --> $0.75";
