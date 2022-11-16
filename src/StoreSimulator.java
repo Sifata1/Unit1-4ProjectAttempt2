@@ -38,6 +38,10 @@ public class StoreSimulator {
         return false;
     }
 
+    public String changeNumItems() {
+        return "Would you like to input another number of apples?";
+    }
+
     public int random(int random) {
         int randomNum = 0;
         if (random == -1) {
