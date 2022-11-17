@@ -11,6 +11,7 @@ public class StoreSimulatorRunner {
         final String CYAN = "\033[0;36m";    // CYAN
         final String RESET = "\u001B[0m";
 
+
         DecimalFormat df = new DecimalFormat("0.00");
         Scanner s = new Scanner(System.in);
         StoreSimulator start = new StoreSimulator();
