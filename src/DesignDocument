@@ -1,0 +1,31 @@
+Instance Variables:
+apple
+banana
+watermelon
+peach
+orange
+pomegranate
+pear
+netTotal
+
+Objects:
+start
+tripOne
+
+Constructors:
+StoreSimulator(budget)
+StoreSimulator()
+
+Methods:
+totalItems(items): It will display the number of items the user buys and return this value as an integer.
+calculateTotalCost: It will calculate the total cost of the items the user buys, including tax, and return this value as a double.
+calculateTax: It will calculate the amount of tax the user pays and return this value as a double.
+calculateNetCost: It will calculate the cost of the items without tax and return this value as a double.
+generateNumOfItems: It will randomly generate a number of items the user should buy if the user cannot decide on a value. (void method)
+toString(): It will display all the information of the user’s information.
+random(int random):
+costBananas(int apples, double cost1)
+costWatermelons(int apples, double cost1)
+costApples(int apples, double cost1)
+costApples(int apples, double cost1)
+

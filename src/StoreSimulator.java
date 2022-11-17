@@ -32,9 +32,6 @@ public class StoreSimulator {
         return false;
     }
 
-    public String changeNumItems() {
-        return "Would you like to input another number of apples?";
-    }
 
     public int random(int random) {
         int randomNum = 0;
@@ -82,8 +79,6 @@ public class StoreSimulator {
     public void numPears(int amt) {
         pear = amt;
     }
-
-
 
     public double costApples(int apples, double cost1) {
         double cost = 0;
@@ -150,10 +145,6 @@ public class StoreSimulator {
 
     public double getNetTotal() {
         return netTotal;
-    }
-
-    public void changeApples(int amt) {
-
     }
 
     public String toString() {

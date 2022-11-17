@@ -27,7 +27,7 @@ public class StoreSimulatorRunner {
            start.numApples(a);
            System.out.println();
 
-           System.out.println("How many bananas would you like to buy? Enter 0 if you wish to not buy any bananas or enter -1 if you would like to buy a random number of bananas. \nQuantity: 25");
+           System.out.println("How many bananas would you like to buy? Enter 0 if you wish to not buy any bananas or enter -1 if you would like to buy a random number of bananas.");
            int b = s.nextInt();
            b = start.random(b);
            if (start.checkForNegatives(b) == true) {
