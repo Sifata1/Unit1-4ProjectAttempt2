@@ -5,14 +5,19 @@ import static java.lang.Math.round;
 
 public class StoreSimulatorRunner {
     public static void main(String[] args) {
+        final String RED = "\033[0;31m";     // RED
+        final String GREEN = "\033[0;32m";   // GREEN
+        final String PURPLE = "\033[0;35m";  // PURPLE
+        final String CYAN = "\033[0;36m";    // CYAN
+        final String RESET = "\u001B[0m";
+
         DecimalFormat df = new DecimalFormat("0.00");
         Scanner s = new Scanner(System.in);
         StoreSimulator start = new StoreSimulator();
 
-        System.out.println("Welcome to The Local Market! Below are our items and prices.");
-        System.out.println(start.toString());
-        System.out.println();
-        System.out.println("Are you ready to begin? Enter Yes to begin.");
+        System.out.println(PURPLE + "Welcome to The Local Market! Below are our items and prices." + RESET);
+        System.out.println(CYAN + start.toString() + RESET);
+        System.out.println(RED + "Are you ready to begin? Enter Yes to begin." + RESET);
         String answer = s.nextLine();
         boolean st = start.willSimulationRun(answer);
         System.out.println();
@@ -45,7 +50,7 @@ public class StoreSimulatorRunner {
            start.numWatermelons(w);
            System.out.println();
 
-           System.out.println("How many peaches would you like to buy? Enter 0 if you wish to not buy any peaches or enter -1 if you would like to buy a random number of peaches. \nQuantity: 25");
+           System.out.println("How many peaches would you like to buy? Enter 0 if you wish to not buy any peaches or enter -1 if you would like to buy a random number of peaches. \nQuantity: 25" );
            int p = s.nextInt();
            p = start.random(p);
            if (start.checkForNegatives(p) == true) {
@@ -83,7 +88,7 @@ public class StoreSimulatorRunner {
 
            StoreSimulator trip1 = new StoreSimulator(a,b,w,p,o,po,pe);
 
-           System.out.println("<-------------------------------------->");
+           System.out.println(GREEN + "<-------------------------------------->");
            System.out.println("The Local Market");
            System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
            System.out.println();

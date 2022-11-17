@@ -26,7 +26,7 @@ public class StoreSimulator {
 
     public boolean willSimulationRun(String answer) {
         String a = answer.toLowerCase();
-        if (a.equals("yes")) {
+        if (a.indexOf("yes") != -1) {
             return true;
         }
         return false;
