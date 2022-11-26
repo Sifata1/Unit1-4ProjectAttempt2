@@ -82,9 +82,7 @@ public class StoreSimulator {
 
     public double costApples(int apples, double cost1) {
         double cost = 0;
-        for (int counter =1; counter <= apples; counter++) {
-            cost = cost + cost1;
-        }
+        cost = cost1*apples;
         netTotal = netTotal + cost;
         return cost;
     }
