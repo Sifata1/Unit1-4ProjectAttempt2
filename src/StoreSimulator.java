@@ -10,6 +10,7 @@ public class StoreSimulator {
     public int pomegranate;
     public int pear;
     private double netTotal;
+    public boolean go = true;
 
     public StoreSimulator() {
     }
@@ -143,6 +144,10 @@ public class StoreSimulator {
 
     public double getNetTotal() {
         return netTotal;
+    }
+
+    public void end() {
+        go = false;
     }
 
     public String toString() {
