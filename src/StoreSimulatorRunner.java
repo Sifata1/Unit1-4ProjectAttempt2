@@ -22,9 +22,11 @@ public class StoreSimulatorRunner {
         String answer = s.nextLine();
         boolean st = start.willSimulationRun(answer);
         System.out.println();
+        System.out.println(GREEN + "Before you begin, note these rules: \n 1: You can enter -1 to get a random number of items \n 2: Any number less than -1 or higher than Java's max integer will automatically be inputted as 0. \n 3: If you do not wish to not buy an item then enter 0." + RESET);
+        System.out.println();
 
        while (st == true) {
-           System.out.println("How many apples would you like to buy? Enter 0 if you wish to not buy any apples or enter -1 if you would like to buy a random number of apples. \nIf you input an invalid number of apples it will automatically set to 0. \nQuantity: 25");
+           System.out.println("How many apples would you like to buy?");
            int a = s.nextInt();
            a = start.random(a);
            if (start.checkForNegatives(a) == true || a > Integer.MAX_VALUE) {
