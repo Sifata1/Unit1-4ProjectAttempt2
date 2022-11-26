@@ -35,7 +35,7 @@ public class StoreSimulatorRunner {
            start.numApples(a);
            System.out.println();
 
-           System.out.println("How many bananas would you like to buy? Enter 0 if you wish to not buy any bananas or enter -1 if you would like to buy a random number of bananas.");
+           System.out.println("How many bananas would you like to buy?");
            int b = s.nextInt();
            b = start.random(b);
            if (start.checkForNegatives(b) == true || b > Integer.MAX_VALUE) {
@@ -44,7 +44,7 @@ public class StoreSimulatorRunner {
            start.numBananas(b);
            System.out.println();
 
-           System.out.println("How many watermelons would you like to buy? Enter 0 if you wish to not buy any watermelons or enter -1 if you would like to buy a random number of watermelons. \nQuantity: 25");
+           System.out.println("How many watermelons would you like to buy?");
            int w = s.nextInt();
            w = start.random(w);
            if (start.checkForNegatives(w) == true || w > Integer.MAX_VALUE) {
@@ -53,7 +53,7 @@ public class StoreSimulatorRunner {
            start.numWatermelons(w);
            System.out.println();
 
-           System.out.println("How many peaches would you like to buy? Enter 0 if you wish to not buy any peaches or enter -1 if you would like to buy a random number of peaches. \nQuantity: 25" );
+           System.out.println("How many peaches would you like to buy?" );
            int p = s.nextInt();
            p = start.random(p);
            if (start.checkForNegatives(p) == true || p > Integer.MAX_VALUE) {
@@ -62,7 +62,7 @@ public class StoreSimulatorRunner {
            start.numPeaches(p);
            System.out.println();
 
-           System.out.println("How many oranges would you like to buy? Enter 0 if you wish to not buy any oranges or enter -1 if you would like to buy a random number of oranges. \nQuantity: 25");
+           System.out.println("How many oranges would you like to buy?");
            int o = s.nextInt();
            o = start.random(o);
            if (start.checkForNegatives(o) == true || o > Integer.MAX_VALUE) {
@@ -71,7 +71,7 @@ public class StoreSimulatorRunner {
            start.numOranges(o);
            System.out.println();
 
-           System.out.println("How many pomegranates would you like to buy? Enter 0 if you wish to not buy any pomegranates or enter -1 if you would like to buy a random number of pomegranates. \nQuantity: 25");
+           System.out.println("How many pomegranates would you like to buy?");
            int po = s.nextInt();
            po = start.random(po);
            if (start.checkForNegatives(po) == true || po > Integer.MAX_VALUE) {
@@ -80,7 +80,7 @@ public class StoreSimulatorRunner {
            start.numPomegranates(po);
            System.out.println();
 
-           System.out.println("How many pears would you like to buy? Enter 0 if you wish to not buy any pears or enter -1 if you would like to buy a random number of pears. \nQuantity: 25");
+           System.out.println("How many pears would you like to buy?");
            int pe = s.nextInt();
            pe = start.random(pe);
            if (start.checkForNegatives(pe) == true || pe > Integer.MAX_VALUE) {
