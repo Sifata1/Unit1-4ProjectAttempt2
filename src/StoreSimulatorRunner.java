@@ -22,11 +22,11 @@ public class StoreSimulatorRunner {
         String answer = s.nextLine();
         boolean st = start.willSimulationRun(answer);
         System.out.println();
-        System.out.println(GREEN + "Before you begin, note these rules: \n 1: You can enter -1 to get a random number of items \n 2: Any number less than -1 or higher than Java's max integer will automatically be inputted as 0. \n 3: If you do not wish to not buy an item then enter 0." + RESET);
+        System.out.println(GREEN + "Before you begin, note these rules: \n 1: You can enter -1 to get a random number of items up to 25. \n 2: Any number less than -1 or higher than Java's max integer will automatically be inputted as 0. \n 3: If you do not wish to not buy an item then enter 0." + RESET);
         System.out.println();
 
 
-       while (start.go) {
+       while (st == true) {
            System.out.println("How many apples would you like to buy?");
            int a = s.nextInt();
            a = start.random(a);
@@ -107,7 +107,7 @@ public class StoreSimulatorRunner {
            System.out.println("Net Cost: $" + df.format(trip1.getNetTotal()));
            System.out.println("<-------------------------------------->");
 
-           start.end();
+           st = false;
        }
 
 
