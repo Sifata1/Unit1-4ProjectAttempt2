@@ -1,7 +1,7 @@
 import java.lang.String;
 
 /**
- * The StoreSimulator class represents a simulation of the store. A simulation includes the number of apples, bananas, watermelons, peaches, oranges, pomegranates, and pears.
+ * The StoreSimulator class represents a simulation of the store. A simulation includes the number of apples, bananas, watermelons, peaches, oranges, pomegranates, and pears. It also includes the net total.
  */
 public class StoreSimulator {
 
@@ -13,7 +13,6 @@ public class StoreSimulator {
     public int pomegranate;
     public int pear;
     private double netTotal;
-    public boolean go = true;
 
     /**
      * Constructor for the StoreSimulator class. This creates a new instance of a Simulation with or without the parameters below.
