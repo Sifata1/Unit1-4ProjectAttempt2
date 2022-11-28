@@ -22,11 +22,11 @@ public class StoreSimulatorRunner {
         String answer = s.nextLine();
         boolean st = start.willSimulationRun(answer);
         System.out.println();
-        System.out.println(GREEN + "Before you begin, note these rules: \n 1: You can enter -1 to get a random number of items up to 25. \n 2: Any number less than -1 or higher than Java's max integer will automatically be inputted as 0. \n 3: If you do not wish to not buy an item then enter 0." + RESET);
-        System.out.println();
 
 
        while (st == true) {
+           System.out.println(GREEN + "Before you begin, note these rules: \n 1: You can enter -1 to get a random number of items up to 25. \n 2: Any number less than -1 or higher than Java's max integer will automatically be inputted as 0 or result in a java error. \n 3: If you do not wish to not buy an item then enter 0." + RESET);
+           System.out.println();
            System.out.println("How many apples would you like to buy?");
            int a = s.nextInt();
            a = start.random(a);
@@ -96,13 +96,13 @@ public class StoreSimulatorRunner {
            System.out.println("The Local Market");
            System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
            System.out.println();
-           System.out.println(start.apple +" apples - " + "$" + df.format(trip1.costApples(a,0.99)));
-           System.out.println(start.banana +" bananas - " + "$" + df.format(trip1.costBananas(b,0.75)));
-           System.out.println(start.watermelon +" watermelons - " + "$" + df.format(trip1.costWatermelons(w,3.50)));
-           System.out.println(start.peach +" peaches - " + "$" + df.format(trip1.costPeaches(p,1.25)));
-           System.out.println(start.orange +" oranges - " + "$" + df.format(trip1.costOranges(o,1.50)));
-           System.out.println(start.pomegranate +" pomegranates - " + "$" + df.format(trip1.costPomegranates(o,3.50)));
-           System.out.println(start.pear +" pears - " + "$" + df.format(trip1.costPears(o,0.99)));
+           System.out.println(a +" apples - " + "$" + df.format(trip1.costApples(a,0.99)));
+           System.out.println(b +" bananas - " + "$" + df.format(trip1.costBananas(b,0.75)));
+           System.out.println(w +" watermelons - " + "$" + df.format(trip1.costWatermelons(w,3.50)));
+           System.out.println(p +" peaches - " + "$" + df.format(trip1.costPeaches(p,1.25)));
+           System.out.println(o +" oranges - " + "$" + df.format(trip1.costOranges(o,1.50)));
+           System.out.println(po +" pomegranates - " + "$" + df.format(trip1.costPomegranates(o,3.50)));
+           System.out.println(pe +" pears - " + "$" + df.format(trip1.costPears(o,0.99)));
            System.out.println();
            System.out.println("Net Cost: $" + df.format(trip1.getNetTotal()));
            System.out.println("<-------------------------------------->");

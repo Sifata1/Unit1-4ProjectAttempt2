@@ -5,13 +5,13 @@ import java.lang.String;
  */
 public class StoreSimulator {
 
-    public int apple;
-    public int banana;
-    public int watermelon;
-    public int peach;
-    public int orange;
-    public int pomegranate;
-    public int pear;
+    private int apple;
+    private int banana;
+    private int watermelon;
+    private int peach;
+    private int orange;
+    private int pomegranate;
+    private int pear;
     private double netTotal;
 
     /**
