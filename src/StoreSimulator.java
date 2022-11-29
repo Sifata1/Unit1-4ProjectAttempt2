@@ -1,10 +1,9 @@
 import java.lang.String;
-
+import java.text.DecimalFormat;
 /**
  * The StoreSimulator class represents a simulation of the store. A simulation includes the number of apples, bananas, watermelons, peaches, oranges, pomegranates, and pears. It also includes the net total.
  */
 public class StoreSimulator {
-
     private int apple;
     private int banana;
     private int watermelon;
@@ -13,6 +12,11 @@ public class StoreSimulator {
     private int pomegranate;
     private int pear;
     private double netTotal;
+
+    /**
+     * This is used to round the costs of the items.
+     */
+    DecimalFormat df = new DecimalFormat("0.00");
 
     /**
      * Constructor for the StoreSimulator class. This creates a new instance of a Simulation with or without the parameters below.
@@ -243,7 +247,7 @@ public class StoreSimulator {
      * toString for the StoreSimulator class. This method will return a receipt of the user's purchases.
      * @return returns a string with the user's purchases along with the total cost.
      */
-    public String toString() {
+    public String prices() {
         String design = "|-------------------------|";
         String apples = "Apple --> $0.99";
         String bananas = "Banana --> $0.75";
@@ -254,6 +258,19 @@ public class StoreSimulator {
         String pears = "Pear --> $0.99";
 
         return design + "\n  " + apples + "\n  " + bananas + "\n  " +  watermelons +  "\n  " + peaches +"\n  "+ oranges +"\n  "+ pomegranates +"\n  "+ pears +"\n"+ design;
+    }
+
+    public String toString() {
+        String a = apple + " apples - " + "$" + df.format(Math.round(costApples(apple, 0.99)*100.00)/100.00);
+        String b = banana + " bananas - " + "$" + df.format(Math.round(costBananas(banana, 0.75)*100.00)/100.00);
+        String c = watermelon + " watermelons - " + "$" + df.format(Math.round(costWatermelons(watermelon, 3.50)*100.00)/100.00);;
+        String d = peach + " peaches - " + "$" + df.format(Math.round(costPeaches(peach, 1.25)*100.00)/100.00);
+        String e = orange + " oranges - " + "$" + df.format(Math.round(costOranges(orange, 1.50)*100.00)/100.00);
+        String f = pomegranate + " pomegranates - " + "$" + df.format(Math.round(costPomegranates(pomegranate, 3.50)*100.00)/100.00);
+        String g = pear + " pears - " + "$" + df.format(Math.round(costPears(pear, 0.99)*100.00)/100.00);
+
+        return a + "\n" + b + "\n" + c + "\n"  + d + "\n"  + e + "\n"  + f + "\n"  + g;
+
     }
 
 }

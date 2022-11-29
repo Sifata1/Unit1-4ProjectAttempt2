@@ -28,6 +28,7 @@ numPomegranates(int amt)
 numPears(int amt)
 getNetTotal()
 toString(): It will display all the information of the user’s information.
+prices():
 random(int random):
 costBananas(int bananas, double cost1)
 costWatermelons(int watermelons, double cost1)

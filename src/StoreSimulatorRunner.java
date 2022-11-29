@@ -17,8 +17,8 @@ public class StoreSimulatorRunner {
         StoreSimulator start = new StoreSimulator();
 
         System.out.println(PURPLE + "Welcome to The Local Market! Below are our items and prices." + RESET);
-        System.out.println(CYAN + start.toString() + RESET);
-        System.out.println(RED + "Are you ready to begin? Enter Yes to begin." + RESET);
+        System.out.println(CYAN + start.prices() + RESET);
+        System.out.println(RED + "Are you ready to begin? Enter Yes to begin or No to end the simulation." + RESET);
         String answer = s.nextLine();
         boolean st = start.willSimulationRun(answer);
         System.out.println();
@@ -96,15 +96,9 @@ public class StoreSimulatorRunner {
            System.out.println("The Local Market");
            System.out.println("29 Fort Greene Pl, Brooklyn, NY 11217");
            System.out.println();
-           System.out.println(a +" apples - " + "$" + df.format(trip1.costApples(a,0.99)));
-           System.out.println(b +" bananas - " + "$" + df.format(trip1.costBananas(b,0.75)));
-           System.out.println(w +" watermelons - " + "$" + df.format(trip1.costWatermelons(w,3.50)));
-           System.out.println(p +" peaches - " + "$" + df.format(trip1.costPeaches(p,1.25)));
-           System.out.println(o +" oranges - " + "$" + df.format(trip1.costOranges(o,1.50)));
-           System.out.println(po +" pomegranates - " + "$" + df.format(trip1.costPomegranates(o,3.50)));
-           System.out.println(pe +" pears - " + "$" + df.format(trip1.costPears(o,0.99)));
+           System.out.println(trip1);
            System.out.println();
-           System.out.println("Net Cost: $" + df.format(trip1.getNetTotal()));
+           System.out.println("Total Cost: $" + df.format(trip1.getNetTotal()));
            System.out.println("<-------------------------------------->");
 
            st = false;
